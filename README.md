@@ -19,8 +19,8 @@ This workflow is designed to accomplish the following objectives:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-repository-url.git
-cd your-repository
+git clone https://github.com/abizer007/Social-Media-Performance-Analysis.git
+cd Social-Media-Performance-Analysis
 ```
 
 ### 2. Install Dependencies
