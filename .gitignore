@@ -1,0 +1,7 @@
+*.pyc
+__pycache__/
+*.log
+.env
+results.json
+assets/demo.gif
+assets/workflow-diagram.png
