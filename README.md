@@ -1,6 +1,9 @@
 # 🚀 **Social Media Performance Analysis For SuperMind Hackathon**
 
 Welcome to the **Social Media Performance Analysis Workflow** repository. This project implements an advanced LangFlow workflow to analyze and manage social media performance metrics, leveraging the capabilities of DataStax Astra DB for efficient data management as an assignment by AI Syndicate 404.
+---
+
+https://astra.datastax.com/langflow/dbe5d54e-de57-4d8f-b927-72d732204353/flow/14aecd59-decf-493a-8a02-67a94b283b0c
 
 ---
 
