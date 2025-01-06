@@ -81,7 +81,8 @@ This section provides a comprehensive explanation of the nodes used in the LangF
 
 ### 🖼️ **Workflow Diagram**
 Insert your workflow diagram here:
-![Workflow Diagram](placeholder-for-workflow-screenshot.png)
+![Workflow Diagram]![WhatsApp Image 2025-01-06 at 22 07 31_06f9013f](https://github.com/user-attachments/assets/4559f944-a565-495b-8459-62f498627623)
+
 
 ---
 
@@ -133,6 +134,9 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## 🖼️ **Screenshots and Media**
 
 Include screenshots or media showcasing the workflow and its outputs to enhance documentation clarity.
+![WhatsApp Image 2025-01-06 at 22 07 31_06f9013f](https://github.com/user-attachments/assets/c917f3bd-b723-41cf-8344-cdb84acba3c7)
+
+![WhatsApp Image 2025-01-06 at 22 13 16_152198ca](https://github.com/user-attachments/assets/0e81548c-9361-409a-9f6c-50dd1d96a470)
 
 ---
 
