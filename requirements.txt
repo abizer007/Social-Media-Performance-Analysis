@@ -1,6 +1,6 @@
 langchain>=0.0.1
 langflow>=1.0.0
-astrasdk>=0.4.3
+astrasdk>=0.4.3,<=0.4.9 
 flask
 langchain-core
 astrapy  # if using AstraDB
