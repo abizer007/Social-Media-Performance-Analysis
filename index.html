@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langflow API Integration</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        input[type="text"], textarea { width: 100%; padding: 10px; margin: 10px 0; }
+        button { padding: 10px 20px; font-size: 16px; cursor: pointer; }
+        .result { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Langflow API Interaction</h1>
+    <form id="messageForm">
+        <label for="message">Enter your message:</label>
+        <textarea id="message" rows="4" placeholder="Type your message here..."></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+    <div class="result" id="responseResult"></div>
+
+    <script>
+        document.getElementById('messageForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            
+            const message = document.getElementById('message').value;
+            
+            fetch('/run_flow', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: message })
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('responseResult').innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+            })
+            .catch(error => {
+                document.getElementById('responseResult').innerText = "Error: " + error.message;
+            });
+        });
+    </script>
+</body>
+</html>
