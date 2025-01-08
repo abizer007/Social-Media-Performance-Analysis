@@ -122,7 +122,7 @@ def home():
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        collection_name: "social_media_analyzer", // Updated to your correct collection name
+                        collection_name: "Social Media Analyzer", // Updated to your correct collection name
                         filters: { query: userInput }, // Modify based on your use case
                         projection: {},
                         limit: 5,
