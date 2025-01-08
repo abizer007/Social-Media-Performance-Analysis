@@ -122,7 +122,7 @@ def home():
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        collection_name: "your_collection_name", // Replace with your default collection
+                        collection_name: "social_media_analyzer", // Updated to your correct collection name
                         filters: { query: userInput }, // Modify based on your use case
                         projection: {},
                         limit: 5,
@@ -154,7 +154,7 @@ def query_database():
     Endpoint to query Astra DB.
     Example payload:
     {
-        "collection_name": "social_media_data",
+        "collection_name": "social_media_analyzer",  # Updated to your correct collection name
         "filters": {"user_id": "123"},
         "projection": {"name": 1, "engagement": 1},
         "limit": 5
@@ -180,4 +180,3 @@ def query_database():
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=5000)
-
