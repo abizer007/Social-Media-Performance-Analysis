@@ -122,9 +122,9 @@ def home():
                         "Content-Type": "application/json",
                     },
                     body: JSON.stringify({
-                        collection_name: "social_media_engagements", // Updated to your correct collection name
-                        filters: { query: userInput }, // Modify based on your use case
-                        projection: {},
+                        collection_name: "social_media_engagements",  // Updated collection name
+                        filters: { query: userInput },  // Modify based on your use case
+                        projection: {},  // Modify based on your use case
                         limit: 5,
                     }),
                 });
@@ -154,9 +154,9 @@ def query_database():
     Endpoint to query Astra DB.
     Example payload:
     {
-        "collection_name": "social_media_analyzer",  # Updated to your correct collection name
-        "filters": {"user_id": "123"},
-        "projection": {"name": 1, "engagement": 1},
+        "collection_name": "social_media_engagements",
+        "filters": {"query": "user's query here"},
+        "projection": {},
         "limit": 5
     }
     """
@@ -164,17 +164,28 @@ def query_database():
     collection_name = data.get("collection_name")
     filters = data.get("filters", {})
     projection = data.get("projection", {})
-    limit = data.get("limit", 10)
+    limit = data.get("limit", 5)
 
     try:
         # Get the collection
         collection = db.get_collection(collection_name)
 
+        # Log the filter and projection for debugging
+        print(f"Filters: {filters}")
+        print(f"Projection: {projection}")
+
         # Perform the query
         results = collection.find(filters, projection=projection, limit=limit)
+        
+        # Convert results to a list and log the response data
         response_data = [result for result in results]
+        print(f"Results: {response_data}")
+
+        if not response_data:
+            return jsonify({"status": "error", "message": "No data found for the given query."})
 
         return jsonify({"status": "success", "data": response_data})
+
     except Exception as e:
         return jsonify({"status": "error", "message": str(e)})
 
